@@ -138,5 +138,95 @@ You can insert \ operator inside a python code to tell computer that the line co
 This is useful(?) if you want to structure your python code in a nicer format.
 '''
 
+#Sequence Data Type
+'''
+List is not the only sequence data type in python, there are other types of data
+that behave similarly as list, such as tuple, string, range object returned by range() function etc.
+You can iterate through them using for loops, extract part of the data using slicing, etc.
+'''
 
+#Mutable and immutable data type
+'''
+Mutable data refers to values that can be added, removed or changed, such as List.
+Immutable data refers to values that can't be changed, such as tuples, strings etc.
+If you intent to modify the value of an immutable data type, an error would occur.
+'''
+try:
+    a = "string"
+    a[0] = "a"
+except TypeError:
+    print("Can't modify string just like how you modify a list.")
 
+'''
+If you want to modify a string for any reason, you can apply the concept of slicing.
+Slicing is applicable to all sequence data types.
+'''
+a = "string"
+b = "a" + a[1:6]
+print(b)
+
+#Tuples
+'''
+Tuples are defined by () sign, and behaves similarly to List except for the fact that it is immutable.
+Since tuples are immutable, their contents can't be modified, which is useful if you don't want anything
+inside that sequence of values to be changed.
+Another benefit of using tuple is that, since tuple is immutable, there it does not have some of the features
+that list would offer, it actually provides python with optimisations that can make your python code run faster.
+'''
+a = (1,2,3,4,5)
+b = (6,)       #Put a comma after the value, if not python would not take it as a tuple value
+
+#Tuple() & List() Functions
+'''
+Just like int(), float(), str() that provides you with ways for type conversions.
+You can use list(), tuple() to convert certain data to the form of list and tuples.
+'''
+list((1,2,3,4,5)) == [1,2,3,4,5]
+tuple([1,2,3,4,5]) == (1,2,3,4,5)
+list("Hello World") == ["H", "e", "l", "l", "o", " ", "W", "o", "r", "l", "d"]
+
+#Reference & ID
+'''
+In python, variables don't actually store the value itself, but rather the reference id that points to
+the location in the computer's memory where this value is stored.
+Hence, when two variables stores reference id to the same mutable data, the modification of that data
+would cause the value in both variables to change.
+Such issue would not happen to immutable data because they can't be modified in the first place.
+'''
+a = 10
+b = a
+a = 5
+print(a, b, sep = "\n")
+
+x = [1,2,3]
+y = x
+x += [4, 5]
+print(x, y,  sep = "\n")
+
+'''
+Similarly, if you put List as argument of a function and modify it within the function,
+such action would cause the original List to be modified as well.
+Hence, be extra careful when you pass List to a function as argument.
+'''
+a = [1,2,3,4]
+def generateListwithHelloWorld(randomList):
+    randomList += ["Hello World"]
+    return randomList
+
+b = generateListwithHelloWorld(a)
+print(a, b, sep = "\n")
+
+#Solving above issues & using copy module's copy() & deepcopy() functions.
+'''
+copy.copy()             make duplicate values of a single list/dictionary, instead of reference id
+copy.deepcopy()         make duplicate values of a nested list/dictionary, instead of reference id
+
+However, if you don't want to import copy module just to solve this issue, then you can just apply
+the concept of slicing to extract the values from the list for other usage.
+'''
+x = [1,2,3]
+y = x[:]
+print(id(y) != id(x))
+
+x.append(4)
+print(x, y, sep = "\n")
