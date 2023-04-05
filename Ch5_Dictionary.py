@@ -78,6 +78,17 @@ print(a)
 a.setdefault(1, "Hello World")
 print(a)
 
+#dict.update()
+'''
+You can update a dictionary with another dictionary, the resulted dictionary would
+contain the key-value pairs from both dictionaries.
+This method is similar to list.extend() when you want to extend a list using another list.
+'''
+a = {1: "one", 2: "two", 3: "three"}
+b = {4: "four", 5: "five"}
+a.update(b)
+print(a)
+
 #Nested Dictionary
 '''
 You can nest dictionary into other dictionaries, however, since the keys of a dictionary can only be of 
