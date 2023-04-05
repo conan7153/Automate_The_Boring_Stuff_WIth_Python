@@ -221,12 +221,15 @@ print(a, b, sep = "\n")
 copy.copy()             make duplicate values of a single list/dictionary, instead of reference id
 copy.deepcopy()         make duplicate values of a nested list/dictionary, instead of reference id
 
-However, if you don't want to import copy module just to solve this issue, then you can just apply
-the concept of slicing to extract the values from the list for other usage.
+However,for single list if you don't want to import copy module just to solve this issue,
+then you can just apply the concept of slicing to extract the values from the list for other usage.
+You can use bulit-in list.copy() method to copy the value of the list to other variables.
 '''
 x = [1,2,3]
 y = x[:]
+z = x.copy()
 print(id(y) != id(x))
+print(id(z) != id(x))
 
 x.append(4)
-print(x, y, sep = "\n")
+print(x, y, z, sep = "\n")
