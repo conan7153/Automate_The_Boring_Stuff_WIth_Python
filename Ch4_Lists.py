@@ -233,3 +233,19 @@ print(id(z) != id(x))
 
 x.append(4)
 print(x, y, z, sep = "\n")
+
+#List Modification using random module
+'''
+Some functions in random module allows you to work with List in interesting ways.
+For example, 
+random.choice() randomly choose a value from the List as the return value
+random.shuffle() randomly shuffle the values within the list and modify the list in place.
+'''
+import random
+MCQ_Answer = ["A", "B", "C", "D"]
+My_Answer = random.choice(MCQ_Answer)
+print(f"My answer for this MCQ Question is {My_Answer}.")
+
+queue = ["P1", "P2", "P3", "P4", "P5", "P6", "P7"]
+random.shuffle(queue)
+print(f"The current arrangement of the queue is as such --> {queue}")
