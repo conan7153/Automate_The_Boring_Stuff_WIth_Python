@@ -152,3 +152,152 @@ HelloWorldRegex = r"(Hello)+ World"
 print(re.search(HelloWorldRegex,msg1))
 print(re.search(HelloWorldRegex,msg2))
 print(re.search(HelloWorldRegex,msg3))
+
+#Specify a range of repetition that you can accept using {min, max} syntax
+'''
+\d{x} means matching text with x number of digital characters.
+You can specify a max & min boundary for text matching.
+As long as the number of repetition of pattern lies within the range specified, 
+regular expression will take this text as matched text. 
+if min, max is omitted, then the lower/upper limit is considered as 0/infinite
+'''
+HaHaHaRegex = r"(Ha){3,5}"
+msg = "Ha HaHa HaHaHaHa"
+print(re.search(HaHaHaRegex, msg).group())
+
+#Greedy & Non-greedy search
+'''
+For ambiguous situation, Regex will match the longest string that fits itself, this is Greedy Search.
+On the other hand, you can specify Non-greedy(lazy) search by using {min, max}? syntax instead.
+In this case, Regex will match the shortest string that fits itself instead.
+'''
+ambiguousMessage = "HaHaHaHaHaHa"
+greedySearch = r"(Ha){3,5}"
+lazySearch = r"(Ha){3,5}?"
+print(re.search(greedySearch, ambiguousMessage).group())
+print(re.search(lazySearch, ambiguousMessage).group())
+
+#findall() method
+'''
+While search() method returns you only the first instance of matched text,
+you can get a list of all matched strings by using findall() method.
+If Regex passed into the method does not have groups, findall() returns a list of matched strings.
+If Regex passed into the method has groups, findall() returns a list of tuples of strings,
+each item in a tuple corresponds to the groups in the Regex.
+'''
+SGPhoneNumRegex1 = r"\+65\d{8}"
+SGPhoneNumRegex2 = r"(\+65)(\d{8})"
+msg = "My phone number is +6512345678, you may try +6587654321 as alternative."
+print(re.findall(SGPhoneNumRegex1, msg))
+print(re.findall(SGPhoneNumRegex2, msg))
+
+#Making your own character class using []
+'''
+As mentioned previously, \d,\s,\w,\D,\S,\W represents different types of characters.
+Such notation is called character class, and you can specify your own character class
+using [].
+For example, [aeiouAEIOU] represents all characters that are vowels.
+You can use hyphen - to specify range of characters: 
+[A - Z] represents all capital letters. 
+[A-Za-z] represents all letters only.
+You can put a ^ sign right after [ to specify a negative character class, the Regex will
+match all characters that are not inside the negative character class:
+[^0-9] represents non-numeric characters
+[^A-Za-z]represents non-alphabetical characters
+[^AEIOUaeiou] represents consonants.
+'''
+VowelRegex = r"[AEIOUaeiou]"
+ConsonantRegex = r"[^AEIOUaeiou]"
+msg = "svanonfaefawignoewfanfoingowiefaw"
+print(re.findall(VowelRegex, msg))
+print(re.findall(ConsonantRegex, msg))
+
+#Matching Start & End of string using ^ and $ operator
+'''
+If you need to match a string whose start or end follows a certain pattern, then we can use ^ and $ operator
+to specify the starting and ending pattern of the matched text.
+If ^ and $ are used together, this means the matched text must exactly follow the Regex pattern.
+'''
+StartswithHelloRegex = r"^Hello"
+EndswithHelloRegex = r"Hello$"
+msg1 = "Hello World"
+msg2 = "Hey Hello"
+print(re.search(StartswithHelloRegex, msg1))
+print(re.search(StartswithHelloRegex, msg2))
+print(re.search(EndswithHelloRegex, msg1))
+print(re.search(EndswithHelloRegex, msg2))
+
+NumberFilterRegex = r"^\d+$"
+msg1 = "12334252592890258903"
+msg2 = "1241231asdfjafoawje1142413241"
+print(re.search(NumberFilterRegex, msg1))
+print(re.search(NumberFilterRegex, msg2))
+
+#Match any character other than new line using . operator
+'''
+If you want to match literally anything that is in a string except for newline characters, then 
+you can use . operator represent such pattern.
+. just match one character only, if you want get everything then use * or + according to your need.
+Such match is greedy by default, if you want non-greedy search then put a ? operator behind, like .*?
+'''
+GreedyRegex = r"\(.*\)"
+LazyRegex = r"\(.*?\)"
+msg = "((Hello World), this is my first python program.)"
+print(re.search(GreedyRegex, msg).group())
+print(re.search(LazyRegex, msg).group())
+
+#List of all Regex operators 
+'''
+| for multiple Regex
+? for optional pattern in Regex
+* for 0 to unlimited occurrence pattern
++ for at least one occurrence pattern
+() for grouping in Regex
+{x} for specifying number of occurrence pattern
+{x, y} for greedy search
+{x, y}? for non-greedy search
+[] for specifying custom character class
+[^] for specifying negative class
+^ for specifying pattern at the start of string
+$ for specifying pattern at the end of string
+. for matching any character other than newlines
+\ for escaping special characters
+'''
+
+#flag argument in regular expression method
+'''
+You can pass flag argument to re modules function to enable certain searching or formatting feature.
+For re.compile(), you can pass this as the 2nd argument. 
+If you are using re.search(), re.match(), re.findall() instead, this would be the 3rd argument.
+re.IGNORECASE/re.I enables case-insensitive search in regular expressions.
+re.DOTALL enables . operator to match newline character as well.
+re.VERBOSE allows you to format your Regex in nicer format for greater readability.
+If you want to pass more than 1 flag argument to re function, write it as
+re.compile(Regex, re.I|re.DOTALL|re.VERBOSE)
+'''
+HelloWorldRegex = re.compile(r"Hello World", re.I)
+DotAllRegex = re.compile(r".*", re.DOTALL)
+msg = "HELLO WORLD\nGOODBYE WORLD"
+print(HelloWorldRegex.search(msg).group())
+print(DotAllRegex.search(msg).group())
+
+phoneNumRegex = re.compile(r"""（
+(\d{3}|\(\d{3}\))?     #Area Code
+(\s|-|\.)?             #separator
+\d{3}                  #first 3 digits
+(\s|-|\.)              #separator
+\d{4}                  #last 4 digits
+(\s*(ext|x|ext.)\s*\d{2,5}?
+)""", re.VERBOSE)
+
+#Substituting matched text with other values using sub() method
+'''
+RO.sub(string to replace, string to be replaced)
+Returns the substituted string
+Note that all matched text would be replaced at the same time.
+'''
+helloRegex = re.compile(r"hello", re.I)
+msg = "hellohello"
+msg = helloRegex.sub("goodbye", msg)
+print(msg)
+
