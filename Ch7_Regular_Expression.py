@@ -90,5 +90,65 @@ Some special characters in Regex includes:
 \()[]{}|?*+^$.
 '''
 
+#Search either X or Y string using |(Pipe) Operator
+'''
+| Operator will return a matched text if either Regex has a matched pattern in the string you want to search.
+The first occurrence of such matched text will be returned.
+Note that you use RO.findall() method, then all the matched text will be returned.
+'''
+XorYRegex = r"X|Y"
+RO = re.compile(XorYRegex)
+msg = "This sentence has both Y and X."
+MO = RO.search(msg)
+print(MO.group())
+print(RO.findall(msg))
 
-    
+'''
+You can combine | and () to match different alternative patterns which are similar in some ways.
+'''
+HeroRegex = r"(Spider|Bat|Super)man"
+msg = "Batman fights the war together with Spiderman and Superman."
+RO = re.compile(HeroRegex)
+MO = RO.search(msg)
+print(MO.group())
+print(RO.findall(msg))
+
+#Optional matching with ? operator
+'''
+In regular expression, you can use ? operator to specify a group which is optional to match.
+Regular Expression will match the string, if this optional part does not occur or occur only once
+in the string.
+'''
+PoliceRegex = r"police(wo)?man"
+msg = "My mother is a policewoman, my sister is going to become a policewoman."
+RO = re.compile(PoliceRegex)
+MO = RO.search(msg)
+print(MO.group())
+
+SGPhoneNumRegex = r"(\+65)?(\d{8})"
+msg = "My phone Number is 12345678, Singapore office phone number, call +6587654321"
+RO = re.compile(SGPhoneNumRegex)
+print(RO.findall(msg))
+
+#Matching no or unlimited repetition of a pattern using * operator
+'''
+* provides similar feature as ?, except for the fact that it can match pattern that
+either does not appear or pattern that repeats over countless number of times.
+'''
+HelloWorldRegex = r"(Hello)* World"
+msg1 = "Hello World"
+msg2 = " World"
+msg3 = "HelloHelloHello World"
+print(re.search(HelloWorldRegex,msg1).group())
+print(re.search(HelloWorldRegex,msg2).group())
+print(re.search(HelloWorldRegex,msg3).group())
+
+#Matching at least one occurrence of a pattern using + operator
+'''
++ operator will match string that occurs at least once, at least the matching pattern occurs,
+it does not matter how many times that pattern occurs.
+'''
+HelloWorldRegex = r"(Hello)+ World"
+print(re.search(HelloWorldRegex,msg1))
+print(re.search(HelloWorldRegex,msg2))
+print(re.search(HelloWorldRegex,msg3))
