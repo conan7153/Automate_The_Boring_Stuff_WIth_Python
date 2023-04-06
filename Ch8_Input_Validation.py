@@ -92,3 +92,24 @@ HelloWordRegex = r"Hello World"
 DestroyWorldRegex = r"World"
 msg = pyip.inputStr("Say something: ", allowRegexes = [HelloWordRegex], blockRegexes = [DestroyWorldRegex])
 print(msg)
+
+#Custom Input Validation
+'''
+pyinputplus module allows you to customise input validation function for your own usage.
+This is done from the inputCustom(customised function) function, which runs as follows:
+Accept user input and return the valid input value.
+Raise Exception when user input is invalid.
+return None if you want the function to return what user has input
+return any other value if you want the function to return a different input
+The defined custom function will be passed to inputCustom() function as argument.
+Take note the argument taken by the custom function will be changed to string value
+by pyinputplus
+'''
+def checkEvenNumber(num):
+    if int(num) % 2 != 0:
+        raise Exception("Number is not even.")
+    else:
+        return num
+
+userInput = pyip.inputCustom(checkEvenNumber)
+print(f"Your even number is {userInput}")
