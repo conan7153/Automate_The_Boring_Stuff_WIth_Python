@@ -1,0 +1,1 @@
+This piece of text is written to the file using pathlib module.
