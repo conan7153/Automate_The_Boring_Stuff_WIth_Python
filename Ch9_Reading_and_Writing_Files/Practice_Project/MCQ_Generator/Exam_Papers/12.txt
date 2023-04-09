@@ -1,50 +1,50 @@
-1,Who is the creator of Python?
-A Yukihiro Matsumoto
-B James Gosling
-C Bjarne Stroustrup
-D Guido Van Rossum
-2,Who is the founder of Nintendo?
-A Sergey Brin
-B Fusajiro Yamauchi
+1,Who is the creator of Java?
+A James Gosling
+B Guido Van Rossum
 C Yukihiro Matsumoto
-D Larry Page
-3,Who is the founder of Amazon?
+D Bjarne Stroustrup
+2,Who is the creator of Python?
+A Bjarne Stroustrup
+B James Gosling
+C Guido Van Rossum
+D Yukihiro Matsumoto
+3,Who is the creator of Ruby?
+A Guido Van Rossum
+B James Gosling
+C Yukihiro Matsumoto
+D Bjarne Stroustrup
+4,Who is the founder of Amazon?
+A Jeff Bezos
+B Steve Jobs
+C Mark Zuckerberg
+D Bill Gates
+5,Who is the founder of Facebook?
 A Mark Zuckerberg
 B Bill Gates
 C Steve Jobs
 D Jeff Bezos
-4,Who is the creator of Ruby?
-A Guido Van Rossum
-B Yukihiro Matsumoto
-C Bjarne Stroustrup
-D James Gosling
-5,Who is the creator of Java?
-A Bjarne Stroustrup
-B Yukihiro Matsumoto
-C James Gosling
-D Guido Van Rossum
-6,Who is the founder of Facebook?
-A Bill Gates
-B Steve Jobs
+6,Who is the founder of Microsoft?
+A Steve Jobs
+B Bill Gates
 C Mark Zuckerberg
 D Jeff Bezos
-7,Who is the creator of C++?
-A Guido Van Rossum
-B Yukihiro Matsumoto
-C James Gosling
-D Bjarne Stroustrup
-8,Who is the creator of Rust?
-A Yukihiro Matsumoto
-B Bjarne Stroustrup
-C Graydon Hoare
-D Guido Van Rossum
-9,Who is the founder of Apple?
-A Bill Gates
+7,Who is the founder of Apple?
+A Steve Jobs
 B Mark Zuckerberg
 C Jeff Bezos
-D Steve Jobs
-10,Who is the founder of Microsoft?
-A Bill Gates
-B Jeff Bezos
-C Mark Zuckerberg
-D Steve Jobs
+D Bill Gates
+8,Who is the creator of C++?
+A Yukihiro Matsumoto
+B Bjarne Stroustrup
+C Guido Van Rossum
+D James Gosling
+9,Who is the founder of Nintendo?
+A Fusajiro Yamauchi
+B Sergey Brin
+C Yukihiro Matsumoto
+D Larry Page
+10,Who is the creator of Rust?
+A Bjarne Stroustrup
+B Guido Van Rossum
+C Graydon Hoare
+D Yukihiro Matsumoto
