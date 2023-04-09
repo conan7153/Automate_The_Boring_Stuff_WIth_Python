@@ -1,0 +1,59 @@
+Who is the creator of Python?
+Guido Van Rossum
+Bjarne Stroustrup
+Yukihiro Matsumoto
+James Gosling
+
+Who is the creator of Java?
+Guido Van Rossum
+Bjarne Stroustrup
+Yukihiro Matsumoto
+James Gosling
+
+Who is the creator of C++?
+Guido Van Rossum
+Bjarne Stroustrup
+Yukihiro Matsumoto
+James Gosling
+
+Who is the creator of Ruby?
+Guido Van Rossum
+Bjarne Stroustrup
+Yukihiro Matsumoto
+James Gosling
+
+Who is the creator of Rust?
+Graydon Hoare
+Guido Van Rossum
+Bjarne Stroustrup
+Yukihiro Matsumoto
+
+Who is the founder of Nintendo?
+Fusajiro Yamauchi
+Yukihiro Matsumoto
+Larry Page
+Sergey Brin
+
+Who is the founder of Amazon?
+Jeff Bezos
+Bill Gates
+Steve Jobs
+Mark Zuckerberg
+
+Who is the founder of Facebook?
+Jeff Bezos
+Bill Gates
+Steve Jobs
+Mark Zuckerberg
+
+Who is the founder of Microsoft?
+Jeff Bezos
+Bill Gates
+Steve Jobs
+Mark Zuckerberg
+
+Who is the founder of Apple?
+Jeff Bezos
+Bill Gates
+Steve Jobs
+Mark Zuckerberg

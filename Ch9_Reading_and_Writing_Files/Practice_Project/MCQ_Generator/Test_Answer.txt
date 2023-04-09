@@ -1,0 +1,10 @@
+Who is the creator of Python?-Guido Van Rossum
+Who is the creator of Java?-James Gosling
+Who is the creator of C++?-Bjarne Stroustrup
+Who is the creator of Ruby?-Yukihiro Matsumoto
+Who is the creator of Rust?-Graydon Hoare
+Who is the founder of Nintendo?-Fusajiro Yamauchi
+Who is the founder of Amazon?-Jeff Bezos
+Who is the founder of Facebook?-Mark Zuckerberg
+Who is the founder of Microsoft?-Bill Gates
+Who is the founder of Apple?-Steve Jobs

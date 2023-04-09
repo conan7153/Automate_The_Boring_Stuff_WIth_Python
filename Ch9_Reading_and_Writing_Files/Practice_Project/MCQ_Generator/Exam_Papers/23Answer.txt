@@ -1,0 +1,10 @@
+1,Who is the founder of Microsoft? D
+2,Who is the creator of Ruby? D
+3,Who is the founder of Amazon? B
+4,Who is the creator of Rust? C
+5,Who is the creator of C++? A
+6,Who is the founder of Nintendo? B
+7,Who is the founder of Facebook? C
+8,Who is the creator of Python? A
+9,Who is the creator of Java? D
+10,Who is the founder of Apple? C

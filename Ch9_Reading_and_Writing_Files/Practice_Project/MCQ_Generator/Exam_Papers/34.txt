@@ -1,0 +1,50 @@
+1,Who is the founder of Microsoft?
+A Bill Gates
+B Jeff Bezos
+C Mark Zuckerberg
+D Steve Jobs
+2,Who is the founder of Amazon?
+A Bill Gates
+B Steve Jobs
+C Jeff Bezos
+D Mark Zuckerberg
+3,Who is the creator of Ruby?
+A James Gosling
+B Yukihiro Matsumoto
+C Bjarne Stroustrup
+D Guido Van Rossum
+4,Who is the founder of Nintendo?
+A Yukihiro Matsumoto
+B Larry Page
+C Fusajiro Yamauchi
+D Sergey Brin
+5,Who is the creator of Python?
+A Guido Van Rossum
+B Bjarne Stroustrup
+C James Gosling
+D Yukihiro Matsumoto
+6,Who is the creator of C++?
+A Yukihiro Matsumoto
+B Guido Van Rossum
+C Bjarne Stroustrup
+D James Gosling
+7,Who is the creator of Rust?
+A Bjarne Stroustrup
+B Graydon Hoare
+C Yukihiro Matsumoto
+D Guido Van Rossum
+8,Who is the founder of Apple?
+A Bill Gates
+B Mark Zuckerberg
+C Steve Jobs
+D Jeff Bezos
+9,Who is the founder of Facebook?
+A Bill Gates
+B Jeff Bezos
+C Mark Zuckerberg
+D Steve Jobs
+10,Who is the creator of Java?
+A Yukihiro Matsumoto
+B Guido Van Rossum
+C James Gosling
+D Bjarne Stroustrup
