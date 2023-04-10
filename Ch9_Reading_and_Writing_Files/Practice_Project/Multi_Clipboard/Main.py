@@ -1,3 +1,11 @@
+'''
+Project requirements:
+1, Users can have the message that correspond to the keyword they entered in the prompt copied to clipboard.
+2, Users can update the table of keywords externally in the prompt by entering Main.py save [keyword]
+to have the current message in the clipboard saved in the table in the form of {keyword:message}
+3, Users can access the list of available keywords in the system by typing Main.py list, the list of keywords
+would be in alphabetical orders.
+'''
 import pyperclip as pyclip
 import sys, shelve
 
