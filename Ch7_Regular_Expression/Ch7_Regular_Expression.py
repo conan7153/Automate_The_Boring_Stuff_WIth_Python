@@ -301,3 +301,10 @@ msg = "hellohello"
 msg = helloRegex.sub("goodbye", msg)
 print(msg)
 
+'''
+For replacement string of sub() method, notation \1, \2, \3 etc. means the corresponding group
+in the matching Regex. 
+'''
+dateFilename = "RandomFile100423.txt"
+dateRegex = ".*(\d{2})(\d{2})(\d{2}).*"
+print(re.sub(dateRegex, r"\3\2\1", dateFilename))
