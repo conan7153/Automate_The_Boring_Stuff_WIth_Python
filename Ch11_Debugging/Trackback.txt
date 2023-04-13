@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "c:\Users\Mao Weiqing\Documents\Python\Automate_Boring_Stuff\Ch11_Debugging\Ch11_Debugging.py", line 64, in <module>
+    HelloWorld()
+  File "c:\Users\Mao Weiqing\Documents\Python\Automate_Boring_Stuff\Ch11_Debugging\Ch11_Debugging.py", line 59, in HelloWorld
+    GoodbyeWorld()
+  File "c:\Users\Mao Weiqing\Documents\Python\Automate_Boring_Stuff\Ch11_Debugging\Ch11_Debugging.py", line 62, in GoodbyeWorld
+    print(4/0)
+ZeroDivisionError: division by zero
