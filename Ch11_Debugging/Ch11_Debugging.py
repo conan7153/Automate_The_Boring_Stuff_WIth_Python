@@ -81,7 +81,53 @@ You should only use assert statement for bug detection during development phase,
 assertion does not tell you the causes of the bug, it would only tells you that the desired condition
 is not met.
 '''
-age = -1
-assert age > 0, "Age cannot be negative number or zero."
+#age = -1
+#assert age > 0, "Age cannot be negative number or zero."
 
+#Logging
+'''
+Beginner programmer sometimes may use print() function to see what are the values stored in some variables as
+the program execute, this method is straight forward but not efficient enough for building complicated software.
+Python provides similar features with its built-in logging module, and after you finish writing the code, you
+can toggle between enable or disable log messages which is ideal for product release and debugging.
+logging.debug(Message) same as print() but provides more useful features in combine with other method in logging module
+logging.basicConfig(level =, format =) tells python about the format of the logging message for logging.debug()
+logging.disable(Message Type) disables the logging functionality in the program, which allows the program to be easily released to the users.
+'''
+import logging
+#logging.disable(logging.DEBUG)
+#logging.basicConfig(level = logging.DEBUG, format = "%(asctime)s - %(levelname)s - %(message)s")
+#logging.debug("Hello World")
 
+#Logging Levels
+'''
+You can categorize log messages into 5 categories, DEBUG, INFO, WARNING, ERROR and CRITICAL(arranged in the sequence
+from least important to most important)
+You can set the level of the logging message by calling their respective function, such as info(), warning(), error(), critical()
+By categorizing messages, you can ask the program to display only logging messages with certain logging level and
+above.
+Example:
+You can do so by setting logging.basicConfig(level = logging.WARNING) to only display logging message with 
+WARNING, ERROR and CRITICAL levels.
+'''
+logging.basicConfig(level = logging.WARNING, format = "%(asctime)s - %(levelname)s - %(message)s", filename = "Logging.txt")
+logging.error("This world is fucked up.")
+logging.warning("I am not in a good mood today.")
+logging.critical("Somebody please destroy this world.")
+logging.info("This world is such a nice place to live on.")
+
+#Disable logging
+'''
+logging.disable() allows you to disable logging message without the need to manually delete or comment out all the
+function call in the program. 
+By passing a level to the disable() method, all log message with that level or below will be disabled.
+Hence, if you want to disable all the logging message, use logging.disable(logging.CRITICAL) to do this.
+Note that this function only disable the log messages after it, so you probably want to place it right after 
+import logging statement
+'''
+
+#Logging to file
+'''
+logging.basicConfig() method has a 'filename' keyword argument, which allows you to store logging messages externally
+in a text file instead of displaying them all on a screen.
+'''

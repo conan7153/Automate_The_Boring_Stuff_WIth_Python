@@ -1,0 +1,3 @@
+2023-04-14 10:47:18,719 - ERROR - This world is fucked up.
+2023-04-14 10:47:18,719 - WARNING - I am not in a good mood today.
+2023-04-14 10:47:18,719 - CRITICAL - Somebody please destroy this world.
